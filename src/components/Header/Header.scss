@@ -2,6 +2,54 @@
     .nav {
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
+        padding-top: 66px;
+
+        .nav__right {
+            .nav__right-title {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 35px;
+                color: #A18A68;
+            }
+        }
+
+        .nav__center {
+            .nav__center-list {
+                list-style-type: none;
+                padding-left: 540px;
+
+                .nav__center-link {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-decoration: none;
+                    display: inline-block;
+                     margin: 0 32px;
+                    color: #000000;
+                }
+            }
+        }
+
+        .nav__left {
+            .nav__left-list {
+                list-style-type: none;
+            }
+
+            .nav__left-link {
+                display: inline-block;
+                margin: 0 22px;
+            }
+        }
     }
+
+    .liner {
+        margin-top: 17px;
+        width: 100%;
+        border: 1px solid #D8D8D8;
+    }
+}
+
+.activer {
+    border-bottom: 2px solid #000000;
 }
