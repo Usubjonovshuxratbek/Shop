@@ -1,17 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import SignIn from './Login page/SignIn/SignIn';
 import SignUp from './Login page/SignUp/SignUp';
 import Header from './components/Header/Header';
-import { Routes, Route } from 'react-router-dom'
+import Signin from './Login page/SignIn/SignIn';
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
-        <Route path='/signin' element={<SignIn/>} />
-        <Route path='/signup' element={<SignUp/>} />
+        <Route path='/signin' element={<Signin />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
+      <Header />
     </div>
   );
 }
