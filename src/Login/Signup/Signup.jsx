@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Signup.scss'
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 function Signup() {
   const { user, setUser } = useState()
-
+  const  navigate = useNavigate()
   const handler = (e) => {
     e.preventDefault()
     let a = e.target.text.value
@@ -13,7 +13,8 @@ function Signup() {
 
     axios.post('https://63e542a8c04baebbcdb7065c.mockapi.io/Data', {
       Email: `${a}`,
-      Password: `${b}`
+      Password: `${b}`,
+      token: 'secert__key'
     })
       .then(function (response) {
         console.log(response);
@@ -33,7 +34,7 @@ function Signup() {
             <button className='btn__signup'>Register</button>
           </span>
 
-          <form onSubmit={handler} action="#" className='login__form'>
+          <form onSubmit={()=>(navigate('/') ,handler)  } action="#" className='login__form'>
             <input name='text' type="text" placeholder='Email' className='login__email' />
             <input name='password' type="password" placeholder='Password' className='login__password' />
             <span className='login__check'>

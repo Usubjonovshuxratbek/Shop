@@ -1,12 +1,13 @@
 import React, { Routes, Route } from 'react-router-dom';
 import axios from 'axios'
 import './App.css';
-import Signin from './pages/Signin/Signin';
-import Signup from './pages/Signup/Signup';
 import Header from './components/Header/Header';
-import Home from './pages/Home/Home';
-import Blog from './pages/Blog/Blog';
-import { useEffect, useState } from 'react'
+import Signin from './Login/Signin/Signin';
+import Signup from './Login/Signup/Signup';
+import { useEffect, useState } from 'react';
+import HomeMain from './components/Home-Main/Home-Main';
+
+
 function App() {
   const [product, setProduct] = useState([])
     useEffect(() => {
@@ -26,13 +27,14 @@ function App() {
     }, [])
   return (
     <div className="App">
-      <Header />
+      
       <Routes>
-        <Route path='/' element={<Home products={product}/>} />
+        <Route path='/' element={<HomeMain products={product}/>} />
         <Route path='/blog' element={<Blog products={product}/>} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
+      <Header />
     </div>
   );
 }
