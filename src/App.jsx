@@ -6,7 +6,7 @@ import Signin from './Login/Signin/Signin';
 import Signup from './Login/Signup/Signup';
 import { useEffect, useState } from 'react';
 import HomeMain from './components/Home-Main/Home-Main';
-
+import Blog from '../src/pages/Blog/Blog'
 
 function App() {
   const [product, setProduct] = useState([])
@@ -27,6 +27,7 @@ function App() {
     }, [])
   return (
     <div className="App">
+      <Header />
       
       <Routes>
         <Route path='/' element={<HomeMain products={product}/>} />
@@ -34,7 +35,6 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
-      <Header />
     </div>
   );
 }
