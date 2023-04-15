@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Signin.scss'
 function Signin() {
+    const navigate = useNavigate()
     return (
         <div>
             <section className='login'>
@@ -10,7 +11,7 @@ function Signin() {
 
                     <span className='login__btns'>
                         <button className='btn__signin'>Sign in</button>
-                        <button className='btn__signup'>Register</button>
+                        <button className='btn__signup' onClick={()=>navigate('/signup')}>Register</button>
                     </span>
 
                     <form action="#" className='login__form'>
