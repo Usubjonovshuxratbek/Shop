@@ -8,6 +8,7 @@ import Blog from './pages/Blog/Blog'
 import { useEffect, useState } from 'react';
 import HomeMain from './components/Home-Main/Home-Main';
 import Fashion from './pages/Fashion/Fashion';
+import Category from './pages/Category/Category';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/Fashion' element={<Fashion/>}/>
+        <Route path='/category' element={<Category/>}/>
       </Routes>
     </div>
   );
