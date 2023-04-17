@@ -4,10 +4,18 @@ import './App.css';
 import Header from './components/Header/Header';
 import Signin from './Login/Signin/Signin';
 import Signup from './Login/Signup/Signup';
+import Blog from './pages/Blog/Blog'
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import Home from './pages/Home/Home';
 import Buy from './pages/Buy/Buy';
 import ShopProducts from './pages/Shop__products/Shop__products';
+=======
+import HomeMain from './components/Home-Main/Home-Main';
+import Fashion from './pages/Fashion/Fashion';
+import Category from './pages/Category/Category';
+
+>>>>>>> e2995c25cfb3d59ddd0d7ee0f77e1ea78dff3f99
 
 function App() {
   const [product, setProduct] = useState([])
@@ -28,14 +36,17 @@ function App() {
     }, [])
   return (
     <div className="App">
-      <Header />
-      
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/shopProducts' element={<ShopProducts />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
+<<<<<<< HEAD
         <Route path='/shopProducts/buy/:slug' element={<Buy />} />
+=======
+        <Route path='/Fashion' element={<Fashion/>}/>
+        <Route path='/category' element={<Category/>}/>
+>>>>>>> e2995c25cfb3d59ddd0d7ee0f77e1ea78dff3f99
       </Routes>
     </div>
   );
