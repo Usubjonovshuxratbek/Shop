@@ -20,7 +20,7 @@ function Header() {
                         <ul className='nav__center-list'>
                             <li className='nav__center-item'>
                                 <Link onClick={() => setActiver(1)} className={activer == 1 ? 'nav__center-link activer' : 'nav__center-link'} to='/'>Shop</Link>
-                                <Link onClick={() => setActiver(2)} className={activer == 2 ? 'nav__center-link activer' : 'nav__center-link'} to='/'>Blog</Link>
+                                <Link onClick={() => setActiver(2)} className={activer == 2 ? 'nav__center-link activer' : 'nav__center-link'} to='/category'>Blog</Link>
                                 <Link onClick={() => setActiver(3)} className={activer == 3 ? 'nav__center-link activer' : 'nav__center-link'} to='/'>Our Story</Link>
                             </li>
                         </ul>
