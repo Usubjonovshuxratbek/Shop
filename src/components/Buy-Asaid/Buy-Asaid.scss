@@ -1,0 +1,27 @@
+.asaid {
+    .nav {
+        display: flex;
+        align-items: center;
+        margin-top: 120px;
+    
+        .nav__list {
+            list-style-type: none;
+        }
+    
+        .nav__item {
+            .nav__link {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                margin: 0 10px;
+                color: #707070;
+            }
+        }
+    }
+
+    .liner {
+        width: 100%;
+        border: 1px solid #D8D8D8;
+        margin-top: 34px;
+    }
+}

@@ -1,34 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React, { useContext } from 'react'
 import './Search__Main.scss'
+import { Link } from 'react-router-dom';
+import { Context } from '../Context/Context';
 
 function Search__Main() {
-    const [product, setProduct] = useState([])
-    useEffect(() => {
-        axios.get('https://63df32c43d94d02c0bb5c567.mockapi.io/posts')
-            .then(function (response) {
-                // handle success
-                console.log(response);
-                setProduct(response.data)
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-    }, [])
+    const {product} = useContext(Context)
 
     return (
         <div className='search__main'>
             <ul className='search__main-list'>
                 {
-                    product && product.map((item)=>(
-                        <li className='search__main-item'>
+                    product && product.map((item, index)=>( 
+                            <li key={index} className='search__main-item'>
+                            <Link className='home__Main-link' to={`/shopProducts/buy/${item.id}`}>
                             <img src={item.img} alt="" />
                             <h2>{item.name}</h2>
                             <span>{item.price}</span>
+                            </Link>
                         </li>
                     ))
                 }

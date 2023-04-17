@@ -5,8 +5,9 @@ import Header from './components/Header/Header';
 import Signin from './Login/Signin/Signin';
 import Signup from './Login/Signup/Signup';
 import { useEffect, useState } from 'react';
-import HomeMain from './components/Home-Main/Home-Main';
-import Blog from '../src/pages/Blog/Blog'
+import Home from './pages/Home/Home';
+import Buy from './pages/Buy/Buy';
+import ShopProducts from './pages/Shop__products/Shop__products';
 
 function App() {
   const [product, setProduct] = useState([])
@@ -30,10 +31,11 @@ function App() {
       <Header />
       
       <Routes>
-        <Route path='/' element={<HomeMain products={product}/>} />
-        <Route path='/blog' element={<Blog products={product}/>} />
+        <Route path='/' element={<Home/>} />
+        <Route path='/shopProducts' element={<ShopProducts />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/shopProducts/buy/:slug' element={<Buy />} />
       </Routes>
     </div>
   );
