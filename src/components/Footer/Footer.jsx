@@ -3,7 +3,7 @@ import Linkidin from '../../assets/img/linkidin-icon.png'
 import Fecbook from '../../assets/img/fecbook-icon.png'
 import Instagiram from '../../assets/img/instagram-icon.png'
 import Twiter from '../../assets/img/twiter-icon.png'
-import './Search__Footer.scss'
+import './Footer.scss'
 
 function Search__Footer() {
     return (

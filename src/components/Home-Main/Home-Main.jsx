@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import './Home-Main.scss'
+import { Context } from '../Context/Context';
 
 function HomeMain() {
-    const [product, setProduct] = useState([])
-    useEffect(() => {
-        axios.get('https://63df32c43d94d02c0bb5c567.mockapi.io/posts')
-            .then(function (response) {
-                // handle success
-                console.log(response);
-                setProduct(response.data)
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-    }, [])
+    const { product } = useContext(Context)
   return (
-    <div>
-      <ul className='search__main-list'>
+    <section className='home__main container'>
+        <div className="home__main-boxs">
+            <div className="box-1">
+                <h2>Shop The Latest</h2>
+            </div>
+            <div className="box-2">
+                <Link to='/ShopProducts'>View All</Link>
+            </div>
+        </div>
+      <ul className='home__main-list'>
                 {
                     product && product.map((item)=>(
-                        <li className='search__main-item'>
+                        <li className='home__main-item'>
                             <img src={item.img} alt="" />
                             <h2>{item.name}</h2>
                             <span>{item.price}</span>
@@ -31,7 +26,7 @@ function HomeMain() {
                     ))
                 }
             </ul>
-    </div>
+    </section>
   )
 }
 
