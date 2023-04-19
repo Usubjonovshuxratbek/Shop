@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Context } from '../../components/Context/Context';
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Star from '../../assets/img/star.png'
 import Like from '../../assets/img/like.png'
 import Liner from '../../assets/img/liner.png'
@@ -9,11 +10,19 @@ import Instagiram from '../../assets/img/instagram-icon.png'
 import Twiter from '../../assets/img/twiter-icon.png'
 import Message from '../../assets/img/message.png'
 import './Buy-Main.scss'
+import { Context } from '../Context/Context';
 
 function BuyMain() {
-  const {product} = useContext(Context)
+  const [count, setCount] = useState(0)
+  const { product } = useContext(Context)
     const { slug } = useParams()
     const fullProduct = product.find((item) => item.id == slug)
+    const add = ()=>{
+      setCount(count + 1)
+    }
+    const remove = ()=>{
+      setCount(count > 0 ? count -1 : count)
+    }
   return (
     <section className='buy'>
       <div className="container">
@@ -36,16 +45,16 @@ function BuyMain() {
           </div>
           <div className="product__info">
             <h2>{fullProduct.name}</h2>
-            <span>{fullProduct.price}</span>
+            <span>{fullProduct.price.split('$').join('').split(',').join('.') * count} $</span>
             <div className="star">
               <img src={Star} alt="" />
             </div>
             <p>{fullProduct.description}</p>
             <div className="add-btn">
             <div className="quantity">
-              <button className='quantity-add'>+</button>
-              <span className='total-price'>1</span>
-              <button className='quantity-remove'>-</button>
+              <button onClick={add} className='quantity-add'>+</button>
+              <span className='total-price'>{count}</span>
+              <button onClick={remove} className='quantity-remove'>-</button>
             </div>
             <button className='cart-btn'>ADD TO CART</button>
             </div>

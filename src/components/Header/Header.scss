@@ -39,6 +39,13 @@
             .nav__left-link {
                 display: inline-block;
                 margin: 0 22px;
+
+                i {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: black;
+                }
             }
         }
     }

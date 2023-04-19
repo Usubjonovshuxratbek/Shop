@@ -8,7 +8,6 @@ function Provider({children}) {
         axios.get('https://63df32c43d94d02c0bb5c567.mockapi.io/posts')
             .then(function (response) {
                 // handle success
-                console.log(response);
                 setProduct(response.data)
             })
             .catch(function (error) {
