@@ -34,7 +34,7 @@ function Header() {
                                 <Link to='/' className='nav__left-link'>
                                 <i class="bi bi-cart3"></i>
                                 </Link>
-                                <Link to='/' className='nav__left-link'>
+                                <Link to='/signin' className='nav__left-link'>
                                 <i class="bi bi-person"></i>
                                 </Link>
                             </li>
