@@ -5,7 +5,7 @@ import Liner from '../../assets/img/liner.png'
 
 function Header() {
     const [activer, setActiver] = useState(1)
-    console.log(activer);
+    // console.log(activer);
     return (
         <header className='header'>
             <div className="container">

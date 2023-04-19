@@ -1,28 +1,36 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Signup.scss'
-import axios from 'axios';
-import { useState, useEffect } from 'react'
+import { usersLogin, usersPassword } from '../FullData'
+
+
+
+
 function Signup() {
-  const { user, setUser } = useState()
-  const  navigate = useNavigate()
+  
+  const navigate = useNavigate()
+  
   const handler = (e) => {
     e.preventDefault()
     let a = e.target.text.value
     let b = e.target.password.value
-
-    axios.post('https://63e542a8c04baebbcdb7065c.mockapi.io/Data', {
-      Email: `${a}`,
-      Password: `${b}`,
-      token: 'secert__key'
+    fetch('https://63e542a8c04baebbcdb7065c.mockapi.io/Data', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ Email : a, Password : b , 'token' : 'secret__key' })  
     })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    .then((res)=> res.json())
+    .then((data)=> console.log(data))
+   
+    navigate('/')
   }
+
+  const nav = () => {
+    navigate('/signin')
+  }
+
   return (
     <div>
       <section className='login'>
@@ -30,11 +38,11 @@ function Signup() {
           <h2 className='title'>My Account</h2>
 
           <span className='login__btns'>
-            <button className='btn__signin'>Sign in</button>
-            <button className='btn__signup'>Register</button>
+            <button onClick={nav} className='btn__signin'>Sign in</button>
+            <button className='btn__active'>Register</button>
           </span>
 
-          <form onSubmit={()=>(navigate('/') ,handler)  } action="#" className='login__form'>
+          <form onSubmit={handler} action="#" className='login__form'>
             <input name='text' type="text" placeholder='Email' className='login__email' />
             <input name='password' type="password" placeholder='Password' className='login__password' />
             <span className='login__check'>
