@@ -11,7 +11,7 @@ function Header() {
             <div className="container">
                 <nav className='nav'>
                     <div className="nav__right">
-                        <h2 className='nav__right-title'>SHOPPE</h2>
+                        <a href="/" className='nav__right-title'>SHOPPE</a>
                     </div>
                     <div className="nav__center">
                         <ul className='nav__center-list'>
@@ -29,13 +29,13 @@ function Header() {
                                     <img src={Liner} alt="" />
                                 </Link>
                                 <Link to='/' className='nav__left-link'>
-                                <i class="bi bi-search"></i>
+                                <i className="bi bi-search"></i>
                                 </Link>
                                 <Link to='/' className='nav__left-link'>
-                                <i class="bi bi-cart3"></i>
+                                <i className="bi bi-cart3"></i>
                                 </Link>
                                 <Link to='/signin' className='nav__left-link'>
-                                <i class="bi bi-person"></i>
+                                <i className="bi bi-person"></i>
                                 </Link>
                             </li>
                         </ul>

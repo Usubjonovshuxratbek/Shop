@@ -14,7 +14,7 @@ function Carusel() {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img class="d-block w-100" src={CaruselImg} alt="First slide"/>
+              <img className="d-block w-100" src={CaruselImg} alt="First slide"/>
             </div>
             <div className="carousel-item">
               <img className="d-block w-100" src={CaruselImg} alt="Second slide"/>

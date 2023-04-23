@@ -13,8 +13,6 @@ import Blog from './pages/Blog/Blog';
 import Error from './pages/Error/Error';
 
 function App() {
-<<<<<<< HEAD
-=======
   const [product, setProduct] = useState([])
     useEffect(() => {
         axios.get('https://63df32c43d94d02c0bb5c567.mockapi.io/posts')
@@ -31,7 +29,6 @@ function App() {
                 // always executed
             });
     }, [])
->>>>>>> 41917457fc244ce4e638be051db63d487a36fc1f
   return (
     <div className="App">
       <Header />
