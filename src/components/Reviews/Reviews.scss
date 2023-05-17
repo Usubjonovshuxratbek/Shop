@@ -1,0 +1,96 @@
+.reviews {
+    .reviews__inner {
+        margin-top: 80px;
+
+        .reviews__nav {
+            .reviews__nav-list {
+                list-style-type: none;
+            }
+        
+            .reviews__nav-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+        
+                .right {
+                    h3 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        font-feature-settings: 'salt' on, 'liga' off;
+                        color: #0F1113;
+                    }
+                }
+        
+                .left {
+                    display: flex;
+                    align-items: center;
+        
+                    a {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #FF4D4D;
+                    }
+                }
+            }
+        }
+
+        .reviews__main {
+            .cards {
+                .cards-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    list-style-type: none;
+                }
+
+                .card {
+                    width: 322px;
+                    height: 500px;
+                    margin-top: 20px;
+                    background: #F6F7FA;
+                    border-radius: 12px;
+
+                    img {
+                        width: 322px;
+                        height: 310px;
+                        border-radius: 12px;
+                        object-fit: cover;
+                    }
+
+                    h3 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        width: 292px;
+                        margin: 16px 0 0 16px;
+                        color: #263141;
+                    }
+
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        width: 310px;
+                        margin: 12px 0 0 16px;
+                        font-feature-settings: 'salt' on, 'liga' off;
+                        color: #7E8794;
+                    }
+
+                    a {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        display: inline-block;
+                        margin: 16px 0 0 16px;
+                        color: #FF4D4D;
+                    }
+                }
+            }
+        }
+    }
+}

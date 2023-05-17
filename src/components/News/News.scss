@@ -1,0 +1,151 @@
+.news {
+    .news__inner {
+        margin-top: 80px;
+
+        .news__nav {
+            .news__nav-list {
+                list-style-type: none;
+            }
+
+            .news__nav-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .right {
+                    h3 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        font-feature-settings: 'salt' on, 'liga' off;
+                        color: #0F1113;
+                    }
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #FF4D4D;
+                    }
+                }
+            }
+        }
+
+        .news__main {
+            .cards {
+                .cards-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    list-style-type: none;
+                }
+
+                .card {
+                    width: 262px;
+                    height: 364px;
+                    background: #F6F7FA;
+                    border: 1px solid #F2F5F9;
+                    border-radius: 12px;
+                    display: inline-block;
+                    margin-top: 20px;
+
+                    img {
+                        width: 222px;
+                        height: 156px;
+                        object-fit: cover;
+                        margin: 20px;
+                        background-blend-mode: darken;
+                    }
+
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        margin-left: 20px;
+                        font-feature-settings: 'salt' on, 'liga' off;
+                        color: #7E8794;
+                    }
+
+                    h3 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        width: 232px;
+                        margin-left: 20px;
+                        color: #263141;
+                    }
+
+                    .card-bottum {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 0 20px;
+
+                        .info {
+                            .bonus {
+                                display: flex;
+                                align-items: center;
+                                margin-top: 12px;
+
+                                span {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    color: #7E8794;
+                                }
+
+                                b {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    margin-left: 24px;
+                                    color: #30D170;
+                                }
+                            }
+
+                            .price {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 20px;
+                                margin-top: 4px;
+                                display: inline-block;
+                                color: #263141;
+                            }
+                            }
+
+                            .buttons {
+                                display: flex;
+                                align-items: center;
+
+                                .heart {
+                                    width: 44px;
+                                    height: 44px;
+                                    padding: 13px;
+                                    background: #FDFDFD;
+                                    border: 1px solid #F2F5F9;
+                                    border-radius: 50%;
+                                }
+
+                                .chart {
+                                    width: 44px;
+                                    height: 44px;
+                                    padding: 13px;
+                                    background: #FDFDFD;
+                                    border: 1px solid #F2F5F9;
+                                    border-radius: 50%;
+                                    margin-left: 12px;
+                                }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.nav {
+    .nav__inner {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin: 8px 0 0 0;
+
+        .center {
+            display: flex;
+            align-items: center;
+            margin-left: 32px;
+
+            select {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                padding: 16px 20px;
+                color: #FFFFFF;                
+                border: none;
+                outline: none;
+                background: #FF4D4D;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                background: #F2F5F9;
+                padding: 14px 0;
+                width: 565px;
+                border-radius: 0px 8px 8px 0px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 20px;
+                }
+
+                input {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-left: 10px;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    color: #A1ABB9;
+                }
+            }
+        }
+
+        .left {
+            margin-left: 10px;
+
+            a {
+                padding: 16px 15px;
+                background: #F2F5F9;
+                border-radius: 8px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .nav {
+        .nav__inner {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8px;
+
+            .right {
+                a {
+                    img {
+                        width: 343px;
+                        height: 40px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .center {
+                display: flex;
+                align-items: center;
+                margin-left: 0;
+    
+                select {
+                    display: none;
+                }
+    
+                form {
+                    display: flex;
+                    align-items: center;
+                    background: #F2F5F9;
+                    padding: 15px 0;
+                    width: 343px;
+                    height: 52px;
+                    margin-top: 8px;
+                    border-radius: 0px 8px 8px 0px;
+    
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        margin-left: 20px;
+                    }
+    
+                    input {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin-left: 10px;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        color: #A1ABB9;
+                    }
+                }
+            }
+    
+            .left {
+                display: none;
+            }
+        }
+    }
+    
+}
